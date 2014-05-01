@@ -1,9 +1,15 @@
-# App Engine <-> GCS sample application
+# Google App Engine <-> Google Cloud Storage sample application
 
-## Architecture overview
+Demonstrates one way to write an App Engine application that stores
+user-uploaded avatars and serves them directly to users from Google
+Cloud Storage.
 
-     +------+       +-----+       +-----+  
-     |      | +---> | GAE | +---> |     |  
-     | User |       +-----+       | GCS |  
-     |      |                     |     |  
-     +------+ <-----------------+ +-----+  
+Serving directly from GCS is cheaper, faster, and better.
+
+## Request architecture overview
+
+     +------+       +-----+       +-----+  
+     |      | +---> | GAE | +---> |     |  
+     | User |       +-----+       | GCS |  
+     |      |                     |     |  
+     +------+ <-----------------+ +-----+  
