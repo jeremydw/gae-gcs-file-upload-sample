@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Avatar Upload Sample</title>
+
+<h1>All avatars</h1>
+{% for avatar in avatars %}
+  <p>{{avatar.key.id()}}<br>
+  <img src="{{avatar.url}}">
+{% else %}
+  <p>No avatars uploaded.
+{% endfor %}
+
+<h1>Add an avatar</h1>
+<form action="{{avatar_upload_url}}" method="post" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <button type="submit">Upload</button>
+</form>
